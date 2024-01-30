@@ -29,13 +29,55 @@ console.log(product);
             var Fruitname="Blackbeerry";
             var count=34;
             var price =100;
+            price++;
             var total=price*count;console.log(Fruitname);
             console.log(total);
         }
+        function operator(){
+var a=10;
+++a;
+a--;
+a++;
+console. log(a);
+var c=10;
+var b=c++;
+var d=b;
+console.log(c);
+        }
+        function datatypes(){
+            /*
+            primitive data type
+            boolean 
+            null
+            undefiend
+            number
+            string
+           
+
+
+            ** non primitive data type
+            Arrays
+            object
+            */
+           var a=10;
+           var b="velavan";
+           var c=true;
+           var d;
+           var e=null;
+           console.log(typeof(a));
+           console.log(typeof(b));
+           console.log(typeof(c));
+           console.log(typeof(d));
+           console.log(typeof(e));
+
+
+
+
+        } 
 
     </script>
 </head>
 <body>
-    <input type="button" onclick="math()" value="click">
+    <input type="button" onclick="datatypes()" value="click">
 </body>
 </html>
