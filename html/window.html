@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <div class="container" id="container">
+        <h1>welcome for voting</h1>
+    <button id="voting" onclick="vote()" >click</button>
+    </div>
+    <script type="text/javascript">
+      
+const vote=() =>{
+   
+    let age=parseInt(window.prompt("enter your age"));
+    if(age>=18 && age<=100){
+        window.alert("your eligible for voting");
+        
+    }
+    else{
+        window.alert("your not eligable for voting");
+    }
+    setTimeout( () =>  {
+    window.open('./Guess.html','about','hieght=600,width=600');},3000);
+   
+}
+
+    </script>
+</body>
+</html>

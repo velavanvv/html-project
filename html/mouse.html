@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseover</title>
+   
+    <script type="text/javascript">
+    window.onload = function(){
+        const function1 = () =>{
+            document.getElementById("para").innerText="velavan";
+        };
+        const function2 = ()=>{
+            document.getElementById("para").innerText="kesavan";
+        };
+        const function3 = ()=>{
+            document.getElementById("para").innerText="Arun";
+        };
+        document.getElementById("check").addEventListener("click",function1);
+        document.getElementById("check").addEventListener("mouseover",function2);
+        document.getElementById("check").addEventListener("mouseout",function3);
+    }</script>
+</head>
+<body>
+    <button id="check" >click here</button>
+<p id="para"></p>
+</body>
+</html>

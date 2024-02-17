@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="file" onclick="add()">Add</button>
+    
+    <div id="addText"></div>
+    <script type="text/javascript">
+        const add=()=>{
+        var file=document.getElementById("file");
+        file.style.backgroundColor="red";
+            var listItem=document.createElement("h1");
+        listItem.textContent="Hello";
+var addcloumn=document.getElementById("addText").append(listItem);
+        
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="raw" onkeyup="letter()">
+    <p id="show"></p>
+    <script type="text/javascript">
+      const letter=()=>{
+
+      var tex=String(document.getElementById("raw").value);
+      tex= tex.toUpperCase();
+      var print=document.getElementById("show").textContent=tex ;// +"" +window.innerWidth +" "+window.innerHeight +" "+ window.location.href+" " +window.location.hostname+" "+window.location.pathname+" ";
+    }
+    </script>
+</body>
+</html>

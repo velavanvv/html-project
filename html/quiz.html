@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <h1>Welcome to my quiz</h1>
+        <label> Which keyword is used to define a class in Java?</label><br>
+        <ol>
+            <li><input type="radio" name="pm" value="class">class <br></li>
+            <li><input type="radio" name="pm" value="define">define <br></li>
+            <li><input type="radio" name="pm" value="struct">struct <br></ll>
+            <li><input type="radio" name="pm" value="d">Class <br></li>
+            <small id="answer"></small><br>
+        </ol>
+        <br>
+
+        <label> What is the main feature of Java?</label><br>
+        <ol>
+            <li><input type="radio" name="2" value="correct">portablity <br></li>
+            <li><input type="radio" name="2" value="define">complexity <br></li>
+            <li><input type="radio" name="2" value="struct">Hardware dependency <br></ll>
+            <li><input type="radio" name="2" value="d">speed <br></li>
+            <small id="answer2"></small><br>
+        </ol>
+        <br>
+        <label> What is the result of 5 + 7 * 2?</label><br>
+        <ol>
+            <li><input type="radio" name="3" value="cor">27 <br></li>
+            <li><input type="radio" name="3" value="correct">26 <br></li>
+            <li><input type="radio" name="3" value="struct">30 <br></ll>
+            <li><input type="radio" name="3" value="d">32 <br></li>
+            <small id="answer3"></small><br>
+        </ol>
+        <br>
+        <label> Which keyword is used to define a method that does not return any value in Java?</label><br>
+        <ol>
+            <li><input type="radio" name="4" value="cor">null <br></li>
+            <li><input type="radio" name="4" value="cor">this <br></li>
+            <li><input type="radio" name="4" value="correct">void <br></ll>
+            <li><input type="radio" name="4" value="d">continue <br></li>
+            <small id="answer4"></small><br>
+        </ol>
+        <br>
+        <label> What is the superclass of all classes in Java??</label><br>
+        <ol>
+            <li><input type="radio" name="5" value="cor"> super<br></li>
+            <li><input type="radio" name="5" value="correct">object <br></li>
+            <li><input type="radio" name="5" value="cor">base <br></ll>
+            <li><input type="radio" name="5" value="d">class <br></li>
+            <small id="answer5"></small><br>
+        </ol>
+        <br>
+        <h1 id="tol" style="text-align: center;"></h1> <br>
+        <button>reset</button>
+    </form>
+    <button onclick="quiz()">click</button>
+    <script type="text/javascript">
+
+        const quiz = () => {
+
+            var num = 0;
+            var name = document.getElementsByName('pm');
+            var answ = document.getElementById("answer");
+            var tol = document.getElementById("tol");
+
+            for (var i = 0; i < name.length; i++) {
+                if (name[i].checked) {
+                    if (name[i].value == 'class') {
+                        answ.style.backgroundColor = "green";
+                        answ.textContent = "correct";
+                        num = num + 1;
+                    }
+
+                    else {
+                        answ.style.backgroundColor = "Red";
+                        answ.textContent = "Wrong";
+
+                    }
+                } 
+            }
+            var name = document.getElementsByName('2');
+            var answ = document.getElementById("answer2");
+            for (var i = 0; i < name.length; i++) {
+                if (name[i].checked) {
+                    if (name[i].value == 'correct') {
+                        answ.style.backgroundColor = "green";
+                        answ.textContent = "correct";
+                        num = num + 1;
+                    }
+                    else {
+                        answ.style.backgroundColor = "Red";
+                        answ.textContent = "Wrong";
+
+                    }
+                }
+            }
+            var name = document.getElementsByName('3');
+            var answ = document.getElementById("answer3");
+            for (var i = 0; i < name.length; i++) {
+                if (name[i].checked) {
+                    if (name[i].value == 'correct') {
+                        answ.style.backgroundColor = "green";
+                        answ.textContent = "correct";
+                        num = num + 1;
+                    }
+                    else {
+                        answ.style.backgroundColor = "Red";
+                        answ.textContent = "Wrong";
+
+                    }
+                }
+            }
+            var name = document.getElementsByName('4');
+            var answ = document.getElementById("answer4");
+            for (var i = 0; i < name.length; i++) {
+                if (name[i].checked) {
+                    if (name[i].value == "correct") {
+                        answ.style.backgroundColor = "green";
+                        answ.textContent = "correct";
+                        num = num + 1;
+                    }
+                    else {
+                        answ.style.backgroundColor = "Red";
+                        answ.textContent = "Wrong";
+
+                    }
+                }
+            }
+            var name = document.getElementsByName('5');
+            var answ = document.getElementById("answer5");
+            for (var i = 0; i < name.length; i++) {
+                if (name[i].checked) {
+                    if (name[i].value == "correct") {
+                        answ.style.backgroundColor = "green";
+                        answ.textContent = "correct";
+                        num = num + 1;
+                    }
+                    else {
+                        answ.style.backgroundColor = "Red";
+                        answ.textContent = "Wrong";
+
+                    }
+                }
+            } tol.textContent = "Your score :" + num + "/5";
+
+        }
+    </script>
+</body>
+
+</html>

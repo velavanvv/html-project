@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="Delete(event)">one</h1>
+    <h1 onclick="Delete(event)">two</h1>
+    <h1 onclick="Delete(event)">three</h1>
+    <h1 onclick="Delete(event)">four</h1>
+    <h1 onclick="Delete(event)">five</h1>
+    <h1 id="change">Name</h1>
+    <button  onclick="text(event)">velavan</button>
+    <button  onclick="text(event)">Arun</button>
+    <button  onclick="text(event)">kesavan</button>
+    <script type="text/javascript">
+const text=(event)=>
+{
+    let chan=document.getElementById("change").textContent=event.target.textContent;
+}
+const Delete=(event)=>{
+    let Delet=event.target.remove();
+}
+
+    </script>
+</body>
+</html>

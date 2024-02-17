@@ -1,0 +1,35 @@
+.container{
+    display:flex;
+}
+.sidebar{
+    height: 100vh;
+    width:250px ;
+    background-color: black;
+    color: white;
+    padding-top: 20px;
+    text-align: center;
+    transition:all .3s ease-out;
+}
+.sidebar ul{
+    padding: 0;
+}
+.sidebar h1 {
+    text-align: center;
+}
+.sidebar  li{
+    list-style-type: none;
+    
+    text-align: center;
+    padding:10px;
+}
+.sidebar a{
+    text-decoration: none;
+color: aliceblue;
+}
+.content{
+    padding: 45px;;
+}
+.container.sidebar-open .sidebar{
+    width: 0;
+    overflow: hidden;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+<link rel="stylesheet" href="../css/toogle.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>sideBar</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <button id="toogleButton">Toggle sideBar</button>
+            <h2>Main content</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus tenetur maxime, aliquid culpa placeat
+                suscipit accusamus nihil sequi voluptate totam. Est in enim deserunt, necessitatibus voluptatum nihil
+                blanditiis voluptatibus fuga?</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+document.getElementById("toogleButton").addEventListener("click",function(){
+document.querySelector(".container").classList.toggle("sidebar-open")
+}
+);
+    </script>
+</body>
+
+</html>

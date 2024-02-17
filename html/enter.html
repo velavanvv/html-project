@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Default Enter in Input Tag</title>
+</head>
+<body>
+
+  <input type="text" id="myInput" onkeydown="handleKeyPress(event)">
+  <input type="text" id="myInput1" onkeydown="handleKeyPress(event)">
+  <input type="text" id="myInput4" onkeydown="handleKeyPress(event)">
+
+  <script>
+    function handleKeyPress(event) {
+      // Check if the pressed key is Enter
+      if (event.key == "Enter") {
+        event.preventDefault(); // Prevent the default behavior of the Enter key
+        console.log("Enter key pressed. Custom action can be performed here.");
+
+        // Add your custom action here, such as submitting a form or performing some other task
+      }
+    }
+  </script>
+
+</body>
+</html>

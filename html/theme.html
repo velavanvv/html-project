@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            const theme=document.getElementById("cha");
+            const function1=()=>{
+       
+                if(document.body.style.color=="white"){
+                    document.getElementById("theme").innerText="white on click off";
+                    document.body.style.color="black";
+theme.style.color="red";
+                    document.body.style.backgroundColor="white";
+                }
+                else{
+               
+                    document.getElementById("theme").innerText="Dark on click on";
+                    document.body.style.color="white";
+                    theme.style.color="green";
+                    document.body.style.backgroundColor="black";
+                }
+            };
+       
+            document.getElementById("theme").addEventListener("click",function1);
+         
+        }
+     
+
+    </script>
+</head>
+<body >
+    <button id="theme">white on click off </button>
+    <h1 id="cha">This my theme project</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis in adipisci aut, exercitationem animi eveniet officiis explicabo, laborum doloribus consectetur molestias, vel obcaecati non sunt quod autem. Cupiditate, dolore nesciunt!</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, totam ratione adipisci necessitatibus sit quae ullam enim molestiae eaque magnam excepturi numquam repellat, incidunt inventore? Quasi labore at quo tenetur.</p>
+</body>
+</html>
