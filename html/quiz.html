@@ -10,7 +10,7 @@
 <body>
     <form>
         <h1>Welcome to my quiz</h1>
-        <label> Which keyword is used to define a class in Java?</label><br>
+        <label>1. Which keyword is used to define a class in Java?</label><br>
         <ol>
             <li><input type="radio" name="pm" value="class">class <br></li>
             <li><input type="radio" name="pm" value="define">define <br></li>
@@ -20,7 +20,7 @@
         </ol>
         <br>
 
-        <label> What is the main feature of Java?</label><br>
+        <label>2. What is the main feature of Java?</label><br>
         <ol>
             <li><input type="radio" name="2" value="correct">portablity <br></li>
             <li><input type="radio" name="2" value="define">complexity <br></li>
@@ -29,7 +29,7 @@
             <small id="answer2"></small><br>
         </ol>
         <br>
-        <label> What is the result of 5 + 7 * 2?</label><br>
+        <label>3. What is the result of 5 + 7 * 2?</label><br>
         <ol>
             <li><input type="radio" name="3" value="cor">27 <br></li>
             <li><input type="radio" name="3" value="correct">26 <br></li>
@@ -38,7 +38,7 @@
             <small id="answer3"></small><br>
         </ol>
         <br>
-        <label> Which keyword is used to define a method that does not return any value in Java?</label><br>
+        <label>4. Which keyword is used to define a method that does not return any value in Java?</label><br>
         <ol>
             <li><input type="radio" name="4" value="cor">null <br></li>
             <li><input type="radio" name="4" value="cor">this <br></li>
@@ -47,7 +47,7 @@
             <small id="answer4"></small><br>
         </ol>
         <br>
-        <label> What is the superclass of all classes in Java??</label><br>
+        <label>5. What is the superclass of all classes in Java??</label><br>
         <ol>
             <li><input type="radio" name="5" value="cor"> super<br></li>
             <li><input type="radio" name="5" value="correct">object <br></li>
@@ -57,9 +57,10 @@
         </ol>
         <br>
         <h1 id="tol" style="text-align: center;"></h1> <br>
-        <button>reset</button>
+        <center><button>reset</button></center>
     </form>
-    <button onclick="quiz()">click</button>
+    <center>
+    <button onclick="quiz()">click</button></center>
     <script type="text/javascript">
 
         const quiz = () => {
