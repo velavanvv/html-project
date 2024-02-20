@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>age</title>
+</head>
+
+<body>
+    <h1>welcome to our page</h1>
+    <label>Description: </label>
+    <p>in this web page we pridiect your age by submiting your date of birth</p>
+    
+    <input type="date" id="a" style="margin: 5%; width: 50%; height: 100px; background-color: black;color: aliceblue;"><br>
+    
+    <center>
+    <button type="submit" onclick="age()">click</button><br>
+    </center>
+    
+    <h1 id="show" style="text-align: center;"></h1>
+
+
+
+
+
+
+    <script type="text/javascript">
+        const age = () => {
+            let birthAge = document.getElementById("a").value;
+            let split = birthAge.split("-");
+            let birthYear = split[0];
+            let birthMonth = split[1];
+            let birthDate = split[2];
+
+            let date = new Date();
+            let nowYear = date.getFullYear();
+            if (birthMonth < date.getMonth() + 1) {
+
+                var show = document.getElementById("show").textContent = nowYear - birthYear;
+
+            }
+            else if (birthMonth == date.getMonth() + 1) {
+                if ((birthDate - date.getDate() )> 0) {
+                    show = document.getElementById("show").textContent = nowYear - birthYear - 1;
+                }
+                else{
+                    show = document.getElementById("show").textContent = nowYear - birthYear;
+                }
+            }
+            else {
+                show = document.getElementById("show").textContent = nowYear - birthYear - 1;
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
