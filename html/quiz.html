@@ -64,93 +64,38 @@
     <script type="text/javascript">
 
         const quiz = () => {
-
-            var num = 0;
-            var name = document.getElementsByName('pm');
-            var answ = document.getElementById("answer");
             var tol = document.getElementById("tol");
+            var num=0;
+         num=num+select("pm","answer","class");
+         num=num+select("2","answer2","correct");
+         num=num+select("3","answer3","correct");
+         num=num+select("4","answer4","correct");
+         num=num+select("5","answer5","correct");
+             tol.textContent = "Your score :" + num + "/5";
+        }
+        function select( questionName, answer,optionAnswer){
+         
+            var name = document.getElementsByName(questionName);
+            var answ = document.getElementById(answer);
+         
 
             for (var i = 0; i < name.length; i++) {
                 if (name[i].checked) {
-                    if (name[i].value == 'class') {
+                    if (name[i].value == optionAnswer) {
                         answ.style.backgroundColor = "green";
                         answ.textContent = "correct";
-                        num = num + 1;
+                        return 1;
                     }
 
                     else {
                         answ.style.backgroundColor = "Red";
                         answ.textContent = "Wrong";
-
+                      return 0;
                     }
                 } 
             }
-            var name = document.getElementsByName('2');
-            var answ = document.getElementById("answer2");
-            for (var i = 0; i < name.length; i++) {
-                if (name[i].checked) {
-                    if (name[i].value == 'correct') {
-                        answ.style.backgroundColor = "green";
-                        answ.textContent = "correct";
-                        num = num + 1;
-                    }
-                    else {
-                        answ.style.backgroundColor = "Red";
-                        answ.textContent = "Wrong";
-
-                    }
-                }
-            }
-            var name = document.getElementsByName('3');
-            var answ = document.getElementById("answer3");
-            for (var i = 0; i < name.length; i++) {
-                if (name[i].checked) {
-                    if (name[i].value == 'correct') {
-                        answ.style.backgroundColor = "green";
-                        answ.textContent = "correct";
-                        num = num + 1;
-                    }
-                    else {
-                        answ.style.backgroundColor = "Red";
-                        answ.textContent = "Wrong";
-
-                    }
-                }
-            }
-            var name = document.getElementsByName('4');
-            var answ = document.getElementById("answer4");
-            for (var i = 0; i < name.length; i++) {
-                if (name[i].checked) {
-                    if (name[i].value == "correct") {
-                        answ.style.backgroundColor = "green";
-                        answ.textContent = "correct";
-                        num = num + 1;
-                    }
-                    else {
-                        answ.style.backgroundColor = "Red";
-                        answ.textContent = "Wrong";
-
-                    }
-                }
-            }
-            var name = document.getElementsByName('5');
-            var answ = document.getElementById("answer5");
-            for (var i = 0; i < name.length; i++) {
-                if (name[i].checked) {
-                    if (name[i].value == "correct") {
-                        answ.style.backgroundColor = "green";
-                        answ.textContent = "correct";
-                        num = num + 1;
-                    }
-                    else {
-                        answ.style.backgroundColor = "Red";
-                        answ.textContent = "Wrong";
-
-                    }
-                }
-            } tol.textContent = "Your score :" + num + "/5";
-
         }
+         
     </script>
 </body>
 

@@ -41,7 +41,7 @@ const concat=(str1,str2)=>{
 var str3=str1+str2;
 return str3;
 }
- */
+/*  
 const num=[12,3,4,56,6,7];
 const add=(nums)=>{
   var sum=0;
@@ -49,5 +49,9 @@ sum=sum+array9lo.forEach(element => {
   
 });
 }
+ */
+var num=123;
+console.log(123%10);
+console.log((123/10));
 
 
