@@ -32,7 +32,9 @@
             let birthYear = split[0];
             let birthMonth = split[1];
             let birthDate = split[2];
-
+   var day=finDay(birthYear,birthMonth,birthDate);
+   var days=["saturday","sunday","Monday","tuesday","wednesday","thrusday","friday"];
+   console.log(days[day]);
             let date = new Date();
             let nowYear = date.getFullYear();
             if (birthMonth < date.getMonth() + 1) {
@@ -53,6 +55,18 @@
             }
 
 
+        }
+        const finDay=(year,month,day)=>{
+            if (month < 3) {
+        month += 12;
+        year -= 1;
+    }
+    let birthDate = day;
+    let birthMonth = month;
+    let birthfirst = Math.floor(year / 100);
+    let birthLast = year % 100;
+            let birthDay = (birthDate + Math.floor((13 * (birthMonth + 1)) / 5) + birthLast + Math.floor(birthLast / 4) + Math.floor(birthfirst / 4) - 2 * birthfirst) % 7;
+    return (birthDay + 5) % 7;
         }
     </script>
 </body>

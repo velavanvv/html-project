@@ -50,8 +50,22 @@ sum=sum+array9lo.forEach(element => {
 });
 }
  */
-var num=123;
-console.log(123%10);
-console.log((123/10));
-
-
+const ad=new Map();
+ad.set(1,"vela");
+console.log(ad.get(1));
+let num1=2;
+let num2=3;
+if(num1==0||num2==0) return 0;
+var max=num1>=num2?num1:num2;
+while(true){
+  if(max%num1==0 && max%num2==0){
+    console.log(max);
+    return;
+  }
+  ++max;
+}
+num1=num1+num2;
+num2=num1-num2;
+num1=num1-num2;
+console.log(num1);
+console.log(num2);
