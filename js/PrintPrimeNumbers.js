@@ -1,3 +1,4 @@
+//print prime number
 const checkPrime=(num)=>{
 let isFlag=[];
     for(let i=0;i<=num;i++){

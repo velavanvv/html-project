@@ -1,4 +1,4 @@
-
+//given number odd or even
 const oddOrEven = (num) => {
     if (num & 1 == 1) {
         console.log("the given number :" + num + "is odd");

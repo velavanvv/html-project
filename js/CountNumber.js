@@ -1,3 +1,4 @@
+//count number digits
 const countNumber = (num) => {
     let count = 0;
     while (num > 0) {

@@ -1,3 +1,5 @@
+//check given number is palindrom or not
+
 const palindrom = (num) => {
     let rev = 0;
     let sum = 0;

@@ -1,3 +1,4 @@
+//remove duplicate in given array
 const remove = (num) => {
     let isFlag = [];
     for (let i = 0; i < num.length; i++) {

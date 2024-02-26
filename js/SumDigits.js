@@ -1,3 +1,4 @@
+//sum of digits
 const sumDigits = (num) => {
     let rev = 0;
     let sum = 0;

@@ -1,3 +1,4 @@
+//sorted array
 const sort=(num)=>{
 var isFlag=true;
 for(let i=0;i<num.length;i++){

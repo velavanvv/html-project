@@ -1,3 +1,4 @@
+//fibonic for given number
 const fibonicNumber=(num)=>{
 let num1=0;
 let num2=1;

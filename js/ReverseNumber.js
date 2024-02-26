@@ -1,3 +1,4 @@
+//reverse given digits
 const reverse = (num) => {
     let rev = 0;
     let sum = 0;

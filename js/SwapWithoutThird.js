@@ -1,3 +1,4 @@
+//swap number without third value
 const swapNumber = (num1, num2) => {
     console.log("Before swap")
     console.log(num1);

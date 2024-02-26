@@ -1,3 +1,5 @@
+//majority element in given array
+
 const major=(num)=>{
 let count=0;
 let max=num[0];

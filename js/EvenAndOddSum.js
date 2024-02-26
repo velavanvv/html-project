@@ -1,3 +1,4 @@
+//Even and odd sum values
 const OESum = (num) => {
     let oddSum = 0;
     let evenSum = 0;

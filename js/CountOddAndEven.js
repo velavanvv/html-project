@@ -1,3 +1,4 @@
+//count number of odds and even
 const countOddAndEven = (num) => {
     let countOdd = 0;
     let countEven = 0;
