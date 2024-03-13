@@ -1,8 +1,6 @@
 //switch example
+
 const switchCase=(num)=>{
-
-
-
     switch(num){
         case 1:{
             console.log("hi");
