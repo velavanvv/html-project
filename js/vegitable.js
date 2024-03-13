@@ -73,3 +73,4 @@ function val() {
     let value =( vegtable(tomatovalue, onionvalue, perKgAmount)).then(num=>{show.innerText=(num)});
 
 }
+//if given kilogram less than 1 kg it shows error and to reuplode;
