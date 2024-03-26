@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+    <title>Document</title>
+    <style>
+        #div_one{
+            margin: 50px;
+            border: 1px solid black;
+            height: 100px;
+        }
+        #div_two{
+            margin: 50px;
+            border: 1px solid black;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <form name="loc_form">
+            <div>
+                <label>Location</label>
+                <input id="location" type="text" name="loc">
+            </div>
+            <input type="submit">
+        </form>
+    </div>
+    <div class="container">
+        <div id="output" class="row">
+
+        </div>
+    </div>
+  
+
+</body>
+<script>
+    let form = document.forms["loc_form"]
+    form.addEventListener("submit",(event)=>{
+        event.preventDefault();
+        sendRequest(form["loc"].value)
+    })
+    function sendRequest(loc){ 
+        let  op = document.getElementById("output");
+        op.innerHTML="";
+        let response = fetch(`http://universities.hipolabs.com/search?country=${loc}`)
+        .then((res)=>{
+            console.log(res);
+            return res.json()
+        }).then((out)=>{
+            console.log(out);
+            for (i in out){
+                let x = document.createElement("div");
+            
+                x.setAttribute("style","border: 1px solid black; margin:10px; padding:10px");
+
+                x.innerHTML= `<div>
+                    <h2>${out[i].name}</h2>
+                    <small>${out[i].country}</small>
+                    <input type=submit value=${out[i].alpha_two_code}>
+                </div>
+                `
+                op.appendChild(x);
+            }
+        })
+    }
+     
+</script>
+</html>

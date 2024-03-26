@@ -8,6 +8,8 @@
 </head>
 
 <body>
+    <div id="timer">time Remaining:<span id="time">10:00
+        </span></div>
     <form>
         <h1>Welcome to my quiz</h1>
         <label>1. Which keyword is used to define a class in Java?</label><br>
@@ -60,24 +62,50 @@
         <center><button>reset</button></center>
     </form>
     <center>
-    <button onclick="quiz()">click</button></center>
+        <button onclick="quiz()">click</button>
+    </center>
     <script type="text/javascript">
+  const timerDuration = 10 * 60;
+let countdown;
+let timerElement = document.getElementById('time');
+  function timer(){
+let timeLeft = timerDuration;
 
+ countdown = setInterval(() => {
+    const minutes = Math.floor(timeLeft / 60);
+    let seconds = timeLeft % 60;
+    if (seconds < 10) {
+        seconds = '0' + seconds;
+    }
+
+    timerElement.textContent = `${minutes}:${seconds}`;
+    timeLeft--;
+    if (timeLeft < 0) {
+        clearInterval(countdown);
+        timerElement.textContent = "times/up";
+    }
+
+
+}, 1000);}
+timer();
         const quiz = () => {
+
+            clearInterval(countdown);
+        timerElement.textContent = "thanks for atten this quiz";
             var tol = document.getElementById("tol");
-            var num=0;
-         num=num+select("pm","answer","class");
-         num=num+select("2","answer2","correct");
-         num=num+select("3","answer3","correct");
-         num=num+select("4","answer4","correct");
-         num=num+select("5","answer5","correct");
-             tol.textContent = "Your score :" + num + "/5";
+            var num = 0;
+            num = num + select("pm", "answer", "class");
+            num = num + select("2", "answer2", "correct");
+            num = num + select("3", "answer3", "correct");
+            num = num + select("4", "answer4", "correct");
+            num = num + select("5", "answer5", "correct");
+            tol.textContent = "Your score :" + num + "/5";
         }
-        function select( questionName, answer,optionAnswer){
-         
+        function select(questionName, answer, optionAnswer) {
+
             var name = document.getElementsByName(questionName);
             var answ = document.getElementById(answer);
-         
+
 
             for (var i = 0; i < name.length; i++) {
                 if (name[i].checked) {
@@ -90,12 +118,14 @@
                     else {
                         answ.style.backgroundColor = "Red";
                         answ.textContent = "Wrong";
-                      return 0;
+                        return 0;
                     }
-                } 
-            }
+                }
+               
+            }return 0;
+
         }
-         
+
     </script>
 </body>
 

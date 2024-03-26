@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Student form</h1>
+   
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td><input type="number" id="age" required></td>
+        </tr>
+        <tr>
+            <th>gender</th>
+            <td><input type="radio" name="g"  requires
+                 value="male" id="g">Male <input type="radio" value="female" id="g">Female</td>
+        </tr>
+        <tr>
+            <th>courses</th>
+            <td><select name="courses" id="course" required style="width: 100%;">
+                <option value="java">java</option>
+                <option value="javascript">javascript</option>
+                <option value="web">web</option>
+            </select></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><input type="text" id="email" required></td>
+        </tr>
+        
+            <tr><td><button type="reset">reset</button></td><td>
+          <button type="submit" style="width: 100%;" onclick="add()">save</button></td></tr>
+        
+    </table>
+    <table border="1" id="table">
+        <tr id="row"></tr>
+    </table>
+    <!--     <input id="hg"><button onclick="add()">Add</button><br>
+    <button onclick="dele()">delete</button>
+    <ul id="ele">
+      -->
+    <!-- </ul> -->
+
+    <script>
+        var row=document.getElementById("row");
+        var dat=document.querySelectorAll("th");
+        for(let i=0;i<dat.length;i++){
+        row.innerHTML=row.innerHTML+"<th>"+dat[i].textContent+"</th>";
+    }row.innerHTML=row.innerHTML+"<th>Action</th>"
+
+
+/*     <button onclick='dele()'>delete</button> */
+        const add = () => {
+            var name = document.getElementById("name");
+            var age = document.getElementById("age");
+            var gender = document.getElementById("g");
+            var course = document.getElementById("course");
+            var email = document.getElementById("email");
+            let table = document.getElementById("table");
+         
+            var g = document.createElement("tr");
+            g.innerHTML = `<td>${name.value}</td><td>${age.value}</td><td>${gender.value}</td><td>${course.value}</td><td>${email.value}</td><button onclick='deleteItem(event)'>delete</button>`;
+            table.append(g);
+        }
+        const dele = () => {
+            let ru = document.querySelectorAll("li");
+            for (let i = 0; i < ru.length; i++) {
+                ru[i].remove();
+                break;
+            }
+        }
+        const deleteItem = (event) => {
+            event.target.parentElement.remove();
+        }
+
+    </script>
+</body>
+
+</html>

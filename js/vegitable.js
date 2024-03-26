@@ -21,8 +21,9 @@ let onion = (weight) => new Promise((resolve, reject) => {
 
 
 async function vegtable(value1, value2, amount) {
+     var total = 0;
     try {
-        let total = 0;
+       
         let totalamount = await tomato(value1);
         console.log("the price  " + value1 + "kg tomato :" + totalamount(amount));
         total = total + totalamount(amount);
@@ -44,6 +45,8 @@ async function vegtable(value1, value2, amount) {
             let num=parseInt(change);
             
             tomatovalue=num;
+            let total3=await tomato(num);
+            total=total+total3(amount);
 
         }
             var onionvalue = document.getElementById("onion").value;
@@ -52,16 +55,18 @@ async function vegtable(value1, value2, amount) {
             let change = prompt("you entered below onion 1 kg:")
        let num=parseFloat(change);
           onionvalue=num;
+          let total3=await onion(num);
+            total=total+total3(amount);
           
 
-        }
-        console.log(onionvalue);
+        }return total;
+ /*        console.log(onionvalue);
         console.log(tomatovalue);
         let perKgAmount = 100;
         let show = document.getElementById("show");
         show.textContent=(vegtable(tomatovalue, onionvalue, perKgAmount)).then(num=>{
             show.innerText=num;
-        });
+        }); */
     }
 }
 
